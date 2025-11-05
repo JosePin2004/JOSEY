@@ -1,0 +1,182 @@
+/* --- Estilos Generales --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3, h4 {
+    color: #cc0000; /* Color rojo de cine */
+}
+
+/* --- Encabezado Principal (Hero) --- */
+.hero {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 5px solid #cc0000;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.1em;
+}
+
+/* --- Contenido Principal --- */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Sección Cartelera --- */
+.cartelera h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+}
+
+.peliculas-grid {
+    display: grid;
+    /* 3 columnas para pantallas grandes */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.pelicula {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.pelicula:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pelicula img {
+    width: 100%;
+    max-width: 200px; /* Tamaño máximo para el póster */
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.pelicula h3 {
+    margin-top: 5px;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.genero {
+    font-style: italic;
+    color: #777;
+    font-size: 0.9em;
+}
+
+.horario {
+    font-weight: bold;
+    margin: 10px 0;
+    color: #cc0000;
+}
+
+.pelicula button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.pelicula button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Sección Comida --- */
+.comida {
+    margin-top: 40px;
+}
+
+.comida h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+}
+
+.combos-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Para que se ajusten en pantallas pequeñas */
+    gap: 20px;
+}
+
+.combo {
+    flex-basis: 30%; /* Ocupa cerca de un tercio del espacio */
+    background-color: #fff0f0; /* Fondo más claro para los combos */
+    border: 1px solid #ffcccc;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.combo h4 {
+    color: #cc0000;
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+.precio {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #4CAF50; /* Color verde para el precio */
+    margin-top: 10px;
+}
+
+/* --- Pie de página --- */
+footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+/* --- Media Queries para Responsividad --- */
+@media (max-width: 768px) {
+    .peliculas-grid {
+        /* 2 columnas en pantallas medianas */
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .combos-grid {
+        flex-direction: column; /* Apila los combos en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .combo {
+        flex-basis: 80%; /* Ocupa más espacio para que se vean bien */
+        max-width: 400px;
+    }
+}
